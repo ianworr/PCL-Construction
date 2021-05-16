@@ -1,0 +1,390 @@
+/* Add a black background color to the top navigation */
+
+html, body {
+/*  display: wrap;
+  align-items: left;
+  justify-content: top;
+  height: 100%;*/
+  /*background-color: lightgrey;*/
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  display: wrap;
+  font-family: Quicksand;
+}
+
+h1 {
+  font-family: Alata;
+}
+
+.topnav {
+  /*background-color: #333;*/
+  /*background-color: #866E6960;*/
+  background-color: white;
+  /*border-top: 2px solid lightgrey;*/
+  border-bottom: 2px solid #866E69;
+  overflow: hidden;
+  position: fixed;
+  top:0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
+  /*font-family: Quicksand;*/
+}
+
+.toplogo {
+  margin: 0px;
+  padding-top: .6em;
+  padding-left: 1em;
+  height: 2em;
+  width: auto;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  /*color: #f2f2f2;*/
+  color: black;
+  text-align: center;
+  padding: 1em .8em;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /*background-color: #04AA6D;*/
+  color: white;
+  background-color: #866E69;
+}
+
+/*.brdr {
+  margin: auto;
+  padding: 0px;
+  border: 10px dotted black;*/
+/*  border-spacing: 5px;
+  
+  background-clip: padding-box;
+}*/
+
+/*.parent1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}*/
+
+.parent1 {
+  position: relative;
+  left: 0;
+  top: 48;
+  margin-top: 4.5em;
+  align-items: center;
+}
+
+/*style="position: relative; left: 0; top: 48;"cla*/
+
+.logo {
+  position: absolute;
+  /*margin-top: 70px;*/
+  /*margin-bottom: 22px;*/
+  margin-left: auto;
+  margin-right: auto;
+  /*margin: auto;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  align-items: center;
+  text-align: center;
+  width: 18%;
+  height: auto;
+  padding: 1em;
+  /*background-color: #333;*/
+  background: white;
+  /*border: 5px solid;*/
+  
+
+  top: 1em;
+  /*left: 40.5%;*/
+  left: 0;
+  right: 0;
+  /*border: 1px green solid;*/
+}
+
+/*style the banner image*/
+.banner {
+  margin-top: 0px;
+  margin-bottom: 22px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  /*height: 30em;*/
+  /*padding: 20px;*/
+  /*box-shadow: 0px 0px 20px black;*/
+
+/*  position: relative;
+  top: 30px;
+  left: 0px;
+  border: 1px red solid;*/
+}
+
+/*create the dividing line*/
+hr.solid {
+  border-top: 3px solid #866E6940;
+  width: 60%;
+  margin-top: 0vw;
+  margin-bottom: 1.2em;
+  background-color: rgba(123, 123, 123, .2);
+  /*padding: 10px;*/
+}
+
+/*h1 {
+  color: black;
+}*/
+
+.grid1 {
+  /*margin: auto;*/
+  display: grid;
+  grid-template-columns: 5% 22.5% 22.5% 22.5% 22.5% 5%;
+  /*grid-template-columns: repeat(4, 20em);*/
+  /*grid-gap: 10px;*/
+  grid-template-areas:
+/*    "a a a b"
+    "a a a b"
+    "c d e f";*/
+    "g a a a b j"
+    "h a a a b k"
+    "i c d e f l";
+  /*background-color: white;*/
+  /*padding: 10px;*/
+  /*width: 70em;*/
+  /*min-width: 0;*/
+  /*min-height: 0;*/
+  /*height: 70%;*/
+  grid-auto-rows: 15vw 1fr;
+  /*overflow: hidden;*/
+  align-items: start;
+  box-sizing: border-box;
+  /*height: 50%;*/
+  margin-bottom: 0px;
+
+}
+
+.grid1 > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  /*text-align: center;*/
+  padding: 0px 0;
+  /*font-size: 1em;*/
+  min-width: 0;
+  min-height: 0;
+  /*overflow: hidden;*/
+}
+
+/*.grid1::after {
+  content: "";
+  clear: both;
+  display: table;*/
+
+.row1 {
+  /*background-color: #2196F320;*/
+  background-color: rgba(123, 123, 123, .1);
+  height: 22vw;
+}
+
+.item1 {
+  /*grid-column-start: 1;
+  grid-column-end: 4;*/
+  grid-area: a;5
+  justify-content: center;
+  align-self: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.item2 {
+  /*max-width: 62%;*/
+  grid-area: b;
+  font-size: 1.2vw;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+}
+
+.row2 {
+  height: 10em;
+  /*flex-direction: row;*/
+  /*opacity: 0.5;*/
+  /*color: white; */
+  display: inline-grid;
+  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-areas:
+    "d a b e"
+    "f c c g";
+  grid-template-rows: 50% 50%;
+  /*align-items: start;*/
+  /*box-sizing: border-box;*/
+
+}
+
+.row2 p {
+  font-size: .9em;
+  width:90%;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.row2 h3 {
+  float: right;
+  margin-top: 3em;
+  margin-right: 2.2em;
+}
+
+.sub1 {
+  grid-area: a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /*background-color: red;*/
+  height: 100%;
+}
+
+.sub2 {
+  grid-area: b;
+  display: flex;
+  /*justify-content: center;*/
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  /*background-color: blue;*/
+  height: 100%;
+  font-size: 130%
+  /*margin: auto;*/
+}
+
+.sub2 h3{
+  margin: 2%;
+}
+
+.sub3 {
+  grid-area: c;
+  justify-content: center;
+  align-self: center;
+  align-items: top;
+  text-align: center;
+  /*background-color: green;*/
+  height: 100%;
+}
+
+.sub3 p{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.qty {
+  grid-area: c;
+  background-color: #69758690;
+}
+
+.time {
+  grid-area: d;
+  background-color: #69867D90;
+}
+
+.pass {
+  grid-area: e;
+  background-color: #866E6990;
+}
+
+.loc {
+  grid-area: f;
+  background-color: #86836990;
+}
+
+/*image styling*/
+.imgwho {
+  /*display: block;*/
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  /*padding: 0px;*/
+  padding-right: 15%;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+  /*height: 19vw;*/
+  /*box-shadow: 0px 0px 20px black;*/
+}
+
+/*style the images*/
+.ptimg {
+  /*display: flex;*/
+  margin: auto;
+  width: 50%;
+  height: auto;
+  border-radius: 100%;
+  background-color: white;
+  padding: 1%;
+}
+
+.wat {
+  display: flex;
+  flex-direction: column;
+  /*margin-left: 0 auto;
+  margin-right: 0 auto;
+  margin-top: 10%*/
+  margin: auto;
+  max-width: 70%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+
+  p {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+
+/*-----------------------------------------------*/
+
+
+/*style each section*/
+.qtybox, .timebox, .passbox, .locbox {
+  /*background-color: lightpink;*/
+  /*margin-left: 20px;*/
+  /*margin-right: 20px;*/
+  /*padding: 10px;*/
+  width: 70%;
+  height: 120%;
+  /*flex: 1;*/
+  /*display: flex;*/
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #69758650;
+  /*#697586  866E69*/
+  /*border: 1px #866E69 solid;*/
+}
+
+.qtytxt, .timetxt, .passtxt, .loctxt {
+  /*text-align: center;*/
+  /*display: block;*/
+  /*background-color: white;*/
+  /*width: 80%;*/
+}
