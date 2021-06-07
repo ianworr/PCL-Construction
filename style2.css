@@ -65,6 +65,7 @@ h1 {
   /*background-color: #04AA6D;*/
   color: white;
   background-color: #866E69;
+  height: 100%;
 }
 
 /*.brdr {
@@ -127,7 +128,7 @@ h1 {
   display: flex;
   align-items: center;
   width: 95%;
-  /*height: 30em;*/
+  height: 40vw;
   /*padding: 20px;*/
   /*box-shadow: 0px 0px 20px black;*/
 
@@ -196,7 +197,7 @@ hr.solid {
 
 .row1 {
   /*background-color: #2196F320;*/
-  background-color: rgba(123, 123, 123, .1);
+  background-color: rgba(123, 123, 123, .2);
   height: 22vw;
 }
 
@@ -220,24 +221,24 @@ hr.solid {
 }
 
 .row2 {
-  height: 10vw;
+  height: 12vw;
   /*flex-direction: row;*/
   /*opacity: 0.5;*/
   /*color: white; */
   display: inline-grid;
-  grid-template-columns: 5% 45% 45% 5%;
+  grid-template-columns: 0% 38% 60% 2%;
   grid-template-areas:
     "d a b e"
-    "f c c g";
-  grid-template-rows: 60% 40%;
+    "f a c g";
+  grid-template-rows: 30% 70%;
   /*align-items: start;*/
   /*box-sizing: border-box;*/
 
 }
 
 .row2 p {
-  font-size: .9em;
-  width:90%;
+  font-size: 1vw;
+  width:95%;
   justify-content: center;
   align-self: center;
   text-align: center;
@@ -274,8 +275,8 @@ hr.solid {
 }
 
 .sub2 h3{
-  margin: 2%;
-  text-shadow: 0px 0px 20px white;
+  margin: auto;
+  /*text-shadow: 0px 0px 20px white;*/
 
 }
 
@@ -287,7 +288,7 @@ hr.solid {
   text-align: center;
   /*background-color: green;*/
   height: 100%;
-  font-size: .85vw;
+  font-size: .89vw;
   /*color: white;*/
 }
 
@@ -295,27 +296,27 @@ hr.solid {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0px;
-  text-shadow: 0px 0px 20px grey;
+  /*text-shadow: 0px 0px 20px grey;*/
 }
 
 .qty {
   grid-area: c;
-  background-color: #69758690;
+  background-color: #69758670;
 }
 
 .time {
   grid-area: d;
-  background-color: #69867D90;
+  background-color: #69867D70;
 }
 
 .pass {
   grid-area: e;
-  background-color: #866E6990;
+  background-color: #866E6970;
 }
 
 .loc {
   grid-area: f;
-  background-color: #86836990;
+  background-color: #86836970;
 }
 
 /*image styling*/
@@ -338,7 +339,7 @@ hr.solid {
 .ptimg {
   /*display: flex;*/
   margin: auto;
-  width: 50%;
+  width: 80%;
   height: auto;
   border-radius: 100%;
   background-color: white;
