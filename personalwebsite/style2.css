@@ -25,7 +25,7 @@ html, body {
 }
 
 @media only screen and (max-width: 900px) {
-  /* For desktop: */
+  /* For tablet and phone: */
   .col-s-0 {width: 0%;}
   .col-s-1 {width: 8.33%;}
   .col-s-2 {width: 16.66%;}
@@ -200,7 +200,6 @@ html, body {
 .regboxbottom {
   padding: 2vw 0px 2vw 2vw;
   /*padding-left: 20 px;*/*/
-
   margin: 0vw 0px 1vw 0vw;
   --brdr:  3vw;
   border-bottom-left-radius: var(--brdr);
@@ -216,10 +215,23 @@ html, body {
 .nametext {
   padding: 0px 0px 0px 1vw;
   margin: 0px;
-  font-size: 3vw;
   font-weight: bold;
   font-family: Quicksand;
   color: darkgreen;
+}
+
+@media screen and (min-width: 900px) {
+  /* For tablet and phone: */
+  .nametext {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* For tablet and phone: */
+  .nametext {
+    font-size: 4vw;
+  }
 }
 
 .smalltext {
