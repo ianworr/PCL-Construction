@@ -24,7 +24,7 @@ html, body {
   padding: 15px;
 }
 
-@media only screen and (max-width: 10in) {
+@media only screen and (max-width: 8in) {
   /* For tablet and phone: */
   .col-s-0 {width: 0%;}
   .col-s-1 {width: 8.33%;}
@@ -41,7 +41,7 @@ html, body {
   .col-s-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 10in) {
+@media only screen and (min-width: 8in) {
   /* For desktop: */
   .col-0 {width: 0%;}
   .col-1 {width: 8.33%;}
