@@ -19,12 +19,18 @@ html, body {
 
 }
 
+:root {
+  --brkpt:  800px;
+  --brdr:  2vw;
+  --brdrs:  1vw;
+}
+
 [class*="col-"] {
   float: left;
   padding: 15px;
 }
 
-@media only screen and (max-width: 8in) {
+@media only screen and (max-width: 800px) {
   /* For tablet and phone: */
   .col-s-0 {width: 0%;}
   .col-s-1 {width: 8.33%;}
@@ -41,7 +47,7 @@ html, body {
   .col-s-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 8in) {
+@media only screen and (min-width: 800px) {
   /* For desktop: */
   .col-0 {width: 0%;}
   .col-1 {width: 8.33%;}
@@ -60,17 +66,31 @@ html, body {
 
 .menu ul {
   list-style-type: none;
-  margin: 1vw;
+  margin-top: 1vw;
   padding: 0;
 }
 
 .menu li {
   padding: 10px;
-  margin-bottom: 20px;
+  /*margin-bottom: .5vw;*/
   font-family: Quicksand;
   /*background-color: #33b5e5;*/
   /*color: #ffffff;*/
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .menu li {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .menu li {
+    margin-bottom: 0px;
+  }
 }
 
 .button {
@@ -119,7 +139,7 @@ html, body {
 .profile-picture {
   padding: 0px 0px 0px 0px;
   vertical-align: top;
-  --brdr:  2vw;
+  /*--brdr:  2vw;*/
   /*border-radius: 0 0 10px 10px;*/
   border-top-left-radius: var(--brdr);
   border-bottom-left-radius: var(--brdr);
@@ -132,7 +152,6 @@ html, body {
 .hellobox {
   border-radius: 1vw;
   /*background: #4dc65d;*/
-  font-size: 2vw;
   font-weight: bold;
   color: white;
   padding: .5vw .8vw .5vw .8vw;
@@ -140,47 +159,107 @@ html, body {
   font-family: Quicksand;
 }
 
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .hellobox {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .hellobox {
+    font-size: 2.5vw;
+  }
+}
+
 /* ______________________________________ */
 /* these are the designs of the cards */
 .namebox {
   padding: 0px 0px 0px 2vw;
   /*padding-left: 20 px;*/
-  --brdr:  1vw;
-  border-top-right-radius: var(--brdr);
-  border-bottom-right-radius: var(--brdr);
+  border-top-right-radius: var(--brdrs);
+  border-bottom-right-radius: var(--brdrs);
   /*background: #4dc65d70;*/
   /*#c3fade;*/
   /*font-family: Alata;*/
-  height: 14vw;
   /*box-shadow: 0 1px 10px*/
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .namebox {
+    height: 14vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .namebox {
+    height: 17vw;
+  }
 }
 
 .aboutbox {
   /*padding: 0px;
   padding-left: 20 px;*/
-  padding: 0px 0px 0px 2vw;
+  padding: 0px 2vw 0px 2vw;
   margin: 0px 0px 1vw 0vw;
-  --brdr:  2vw;
+  /*--brdr:  2vw;*/
   /*border-top-right-radius: var(--brdr);*/
   border-bottom-right-radius: var(--brdr);
-  border-bottom-left-radius: 1vw;
+  border-bottom-left-radius: var(--brdrs);
   /*background: #4dc65d40;*/
   /*#a0f8ac85;*/
   /*#d5f3e4;*/
   /*font-family: Quicksand;*/
-  height: 25vw;
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
   /*box-shadow: 0 1px 10px;*/
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .aboutbox {
+    height: 25vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .aboutbox {
+    height: 35vw;
+  }
 }
 
 .sidebox {
   border-radius: .8vw;
   /*background: #4dc65d;*/
-  font-size: 1vw;
   color: white;
   padding: .5vw .8vw .5vw .8vw;
   /*width: 500px;*/
   font-weight: bold;
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .sidebox {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .sidebox {
+    font-size: 2vw;
+  }
+}
+
+.genbox {
+  border-radius: .8vw;
+  /*background: #4dc65d;*/
+  color: black;
+  padding: .5vw .5vw .5vw .5vw;
+  width: fit-content;
 }
 
 .regboxtop {
@@ -220,14 +299,14 @@ html, body {
   color: darkgreen;
 }
 
-@media screen and (min-width: 900px) {
-  /* For tablet and phone: */
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
   .nametext {
     font-size: 3vw;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   /* For tablet and phone: */
   .nametext {
     font-size: 4vw;
@@ -236,9 +315,40 @@ html, body {
 
 .smalltext {
   padding: 0px 1px 0px 1vw;
-  margin: 0px;
-  font-size: 1vw;
+  margin: 0px;  
   font-family: Alata;
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .smalltext {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .smalltext {
+    font-size: 1.5vw;
+  }
+}
+
+.gentext {
+  font-family: Alata;
+}
+
+@media screen and (min-width: 800px) {
+  /* For Desktop: */
+  .gentext {
+    font-size: 1vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* For tablet and phone: */
+  .gentext {
+    font-size: 1.5vw;
+  }
 }
 
 /* ______________________________________ */
