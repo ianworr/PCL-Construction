@@ -20,7 +20,7 @@ html, body {
 }
 
 :root {
-  --brkpt:  750px;
+  --brkpt:  11in;
   --brdr:  2vw;
   --brdrs:  1vw;
 }
@@ -30,7 +30,7 @@ html, body {
   padding: 15px;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 11in) {
   /* For tablet and phone: */
   .col-s-0 {width: 0%;}
   .col-s-1 {width: 8.33%;}
@@ -47,7 +47,7 @@ html, body {
   .col-s-12 {width: 100%;}
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 11in) {
   /* For desktop: */
   .col-0 {width: 0%;}
   .col-1 {width: 8.33%;}
@@ -66,12 +66,12 @@ html, body {
 
 .menu ul {
   list-style-type: none;
-  margin-top: 1vw;
-  padding: 0;
+  margin-top: 0em;
+  padding: 1vw 0 0 0;
 }
 
 .menu li {
-  padding: 10px;
+  padding: 0 0px 1vw 10px;
   /*margin-bottom: .5vw;*/
   font-family: Quicksand;
   /*background-color: #33b5e5;*/
@@ -79,14 +79,21 @@ html, body {
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .menu li {
     margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
+  /* For tablet and phone: */
+  .menu li {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 7in) {
   /* For tablet and phone: */
   .menu li {
     margin-bottom: 0px;
@@ -114,11 +121,6 @@ html, body {
 }
 
 .topnav {
-  /*background-color: #333;*/
-  /*background-color: #866E6960;*/
-  /*background-color: white;*/
-  /*border-top: 2px solid lightgrey;*/
-  /*border-bottom: 2px solid #697586;*/
   overflow: hidden;
   position: fixed;
   left:0;
@@ -127,7 +129,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /*z-index: 99;*/
+  z-index: 99;
   /*font-family: Quicksand;*/
 }
 
@@ -159,14 +161,14 @@ html, body {
   font-family: Quicksand;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .hellobox {
     font-size: 2vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .hellobox {
     font-size: 2.5vw;
@@ -186,14 +188,14 @@ html, body {
   /*box-shadow: 0 1px 10px*/
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .namebox {
     height: 14vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .namebox {
     height: 17vw;
@@ -217,14 +219,14 @@ html, body {
   /*box-shadow: 0 1px 10px;*/
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .aboutbox {
     height: 25vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .aboutbox {
     height: 35vw;
@@ -233,24 +235,22 @@ html, body {
 
 .sidebox {
   border-radius: .8vw;
-  /*background: #4dc65d;*/
   color: white;
   padding: .5vw .8vw .5vw .8vw;
-  /*width: 500px;*/
   font-weight: bold;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .sidebox {
     font-size: 1vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .sidebox {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 }
 
@@ -258,8 +258,22 @@ html, body {
   border-radius: .8vw;
   /*background: #4dc65d;*/
   color: black;
-  padding: .5vw .5vw .5vw .5vw;
+  /*padding: .5vw .5vw .5vw .5vw;*/
   width: fit-content;
+}
+
+@media screen and (min-width: 11in) {
+  /* For Desktop: */
+  .genbox {
+    padding: .4vw;
+  }
+}
+
+@media screen and (max-width: 11in) {
+  /* For tablet and phone: */
+  .genbox {
+    padding: .1vw .1vw .1vw .1vw;
+  }
 }
 
 .regboxtop {
@@ -299,14 +313,14 @@ html, body {
   color: darkgreen;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .nametext {
     font-size: 3vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .nametext {
     font-size: 4vw;
@@ -319,14 +333,14 @@ html, body {
   font-family: Alata;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .smalltext {
     font-size: 1vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .smalltext {
     font-size: 1.5vw;
@@ -337,17 +351,18 @@ html, body {
   font-family: Alata;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 11in) {
   /* For Desktop: */
   .gentext {
     font-size: 1vw;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 11in) {
   /* For tablet and phone: */
   .gentext {
-    font-size: 1.5vw;
+    font-size: 1.1vw;
+    /*margin: 0px;*/
   }
 }
 
@@ -355,6 +370,7 @@ html, body {
 /* ooohhhh pretty colors */
 .greenfull {
   background: #4dc65d;
+  color: white;
 }
 
 .greenmid {
@@ -367,6 +383,7 @@ html, body {
 
 .bluefull {
   background: #4dbbc6;
+  color: white;
 }
 
 .bluemid {
@@ -379,6 +396,7 @@ html, body {
 
 .redfull {
   background: #c64d63;
+  color: white;
 }
 
 .redmid {
@@ -392,6 +410,7 @@ html, body {
 .yellowfull {
   background: #c4c64d;
   /*c6bb4d*/
+  color: white;
 }
 
 .yellowmid {
