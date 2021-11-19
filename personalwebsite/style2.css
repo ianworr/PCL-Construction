@@ -23,6 +23,55 @@ html, body {
   --brkpt:  1000px;
   --brdr:  2vw;
   --brdrs:  1vw;
+
+}
+
+@media (min-width: 1000px) {
+  /* For Desktop: */                             
+  :root {
+    --tpnvpd: 10px; /*topnav class padding*/
+    --limb: 20px;   /*menu list bottom margin for spacing*/
+    --hbfs: 2vw;    /*hellobox class font size*/
+    --nbht: 14vw;   /*namebox class height*/
+    --abht: 25vw;   /*aboutbox class height*/
+    --sbfs: 1vw;    /*sidebox class font size*/
+    --gbpd: .4vw; /*genbox class padding*/
+    --ntfs:  3vw; /*nametext class font size*/
+    --stfs: 1vw; /*smalltext class font size*/
+    --gtfs: 1wv; /*gentext class font size*/
+  }
+}
+
+@media (max-width: 1000px) { 
+  /* For tablet and phone: */                            
+  :root {
+    --tpnvpd: 5px; /*topnav class padding*/
+    --limb: 10px; /*menu list bottom margin for spacing*/
+    --hbfs: 2.5vw; /*hellobox class font size*/
+    --nbht: 17vw; /*namebox class height*/
+    --abht: 35vw; /*aboutbox class height*/
+    --sbfs: 1.5vw; /*sidebox class font size*/
+    --gbpd: .1vw .1vw .1vw .1vw; /*genbox class padding*/
+    --ntfs:  4vw; /*nametext class font size*/
+    --stfs: 1.5vw; /*smalltext class font size*/
+    --gtfs: 1.1wv; /*gentext class font size*/
+  }
+}
+
+@media (max-width: 600px) {
+  /* For tablet and phone: */                             
+  :root {
+    --tpnvpd: 2px; /*topnav class padding*/
+    --limb: 0px; /*menu list bottom margin for spacing*/
+    --hbfs: 2.5vw; /*hellobox class font size*/
+    --nbht: 17vw; /*namebox class height*/
+    --abht: 35vw; /*aboutbox class height*/
+    --sbfs: 1.5vw; /*sidebox class font size*/
+    --gbpd: .1vw .1vw .1vw .1vw; /*genbox class padding*/
+    --ntfs:  4vw; /*nametext class font size*/
+    --stfs: 1.5vw; /*smalltext class font size*/
+    --gtfs: 1.1wv; /*gentext class font size*/
+  }
 }
 
 [class*="col-"] {
@@ -72,32 +121,12 @@ html, body {
 
 .menu li {
   padding: 0 0px 1vw 10px;
+  margin-bottom: var(--limb);
   /*margin-bottom: .5vw;*/
   font-family: Quicksand;
   /*background-color: #33b5e5;*/
   /*color: #ffffff;*/
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .menu li {
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .menu li {
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  /* For tablet and phone: */
-  .menu li {
-    margin-bottom: 0px;
-  }
 }
 
 .button {
@@ -138,7 +167,7 @@ html, body {
   width: 16.66%;
   height: 100%;
   margin: 0;
-  padding: 10px;
+  padding: var(--tpnvpd);
   z-index: 99;
   /*font-family: Quicksand;*/
 }
@@ -180,21 +209,8 @@ html, body {
   color: white;
   padding: .5vw .8vw .5vw .8vw;
   width: fit-content;
+  font-size: var(--hbfs);
   font-family: Quicksand;
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .hellobox {
-    font-size: 2vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .hellobox {
-    font-size: 2.5vw;
-  }
 }
 
 /* ______________________________________ */
@@ -204,24 +220,11 @@ html, body {
   /*padding-left: 20 px;*/
   border-top-right-radius: var(--brdrs);
   border-bottom-right-radius: var(--brdrs);
+  height: var(--nbht);
   /*background: #4dc65d70;*/
   /*#c3fade;*/
   /*font-family: Alata;*/
   /*box-shadow: 0 1px 10px*/
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .namebox {
-    height: 14vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .namebox {
-    height: 17vw;
-  }
 }
 
 .aboutbox {
@@ -229,6 +232,7 @@ html, body {
   padding-left: 20 px;*/
   padding: 0px 2vw 0px 2vw;
   margin: 0px 0px 1vw 0vw;
+  height: var(--abht);
   /*--brdr:  2vw;*/
   /*border-top-right-radius: var(--brdr);*/
   border-bottom-right-radius: var(--brdr);
@@ -241,44 +245,18 @@ html, body {
   /*box-shadow: 0 1px 10px;*/
 }
 
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .aboutbox {
-    height: 25vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .aboutbox {
-    height: 35vw;
-  }
-}
-
 .sidebox {
   border-radius: .8vw;
   color: white;
   padding: .5vw .8vw .5vw .8vw;
   font-weight: bold;
-  
-}
+  font-size: var(--sbfs);
 
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .sidebox {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .sidebox {
-    font-size: 1.5vw;
-  }
 }
 
 .genbox {
   border-radius: .5vw;
+  padding: var(--gbpd);
   /*background: #4dc65d;*/
   /*color: black;*/
   /*padding: .5vw .5vw .5vw .5vw;*/
@@ -286,19 +264,6 @@ html, body {
   /*height: fit-content;*/
 }
 
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .genbox {
-    padding: .4vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .genbox {
-    padding: .1vw .1vw .1vw .1vw;
-  }
-}
 
 .regboxtop {
   padding: 0px 0px 0vw 2vw;
@@ -337,59 +302,19 @@ html, body {
   font-weight: bold;
   font-family: Quicksand;
   color: darkgreen;
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .nametext {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .nametext {
-    font-size: 4vw;
-  }
+  font-size: var(--ntfs);
 }
 
 .smalltext {
   padding: 0px 1px 0px 1vw;
   margin: 0px;  
   font-family: Alata;
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .smalltext {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .smalltext {
-    font-size: 1.5vw;
-  }
+  font-size: var(--stfs);
 }
 
 .gentext {
   font-family: Alata;
-}
-
-@media screen and (min-width: 1000px) {
-  /* For Desktop: */
-  .gentext {
-    font-size: 1vw;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* For tablet and phone: */
-  .gentext {
-    font-size: 1.1vw;
-    /*margin: 0px;*/
-  }
+  font-size: var(--gtfs);
 }
 
 /* ______________________________________ */
