@@ -44,11 +44,12 @@ html, body {
   /* For Desktop: */                             
   :root {
     --tpnvpd: 10px; /*topnav class padding*/
-    --limb: 20px;   /*menu list bottom margin for spacing*/
-    --hbfs: 2vw;    /*hellobox class font size*/
-    --nbht: 14vw;   /*namebox class height*/
-    --abht: 25vw;   /*aboutbox class height*/
-    --sbfs: 1vw;    /*sidebox class font size*/
+    --ulmt: 0px; /*ul menu margin top*/
+    --limb: 15px; /*menu list bottom margin for spacing*/
+    --hbfs: 2vw; /*hellobox class font size*/
+    --nbht: 14vw; /*namebox class height*/
+    --abht: 25vw; /*aboutbox class height*/
+    --sbfs: 1vw; /*sidebox class font size*/
     --gbpd: .4vw; /*genbox class padding*/
     --ntfs:  3vw; /*nametext class font size*/
     --stfs: 1vw; /*smalltext class font size*/
@@ -60,6 +61,7 @@ html, body {
   /* For tablet and phone: */                            
   :root {
     --tpnvpd: 5px; /*topnav class padding*/
+    --ulmt: 5px; /*ul menu margin top*/
     --limb: 10px; /*menu list bottom margin for spacing*/
     --hbfs: 2.5vw; /*hellobox class font size*/
     --nbht: 17vw; /*namebox class height*/
@@ -76,7 +78,8 @@ html, body {
   /* For tablet and phone: */                             
   :root {
     --tpnvpd: 2px; /*topnav class padding*/
-    --limb: 0px; /*menu list bottom margin for spacing*/
+    --ulmt: 10px; /*ul menu margin top*/
+    --limb: 10px; /*menu list bottom margin for spacing*/
     --hbfs: 2.5vw; /*hellobox class font size*/
     --nbht: 17vw; /*namebox class height*/
     --abht: 35vw; /*aboutbox class height*/
@@ -129,7 +132,7 @@ html, body {
 
 .menu ul {
   list-style-type: none;
-  margin-top: 0em;
+  margin-top: var(--ulmt);
   padding: 1vw 0 0 0;
 }
 
@@ -156,17 +159,25 @@ html, body {
   cursor: pointer;*/
   /*display: inline-block;*/
   margin-top: 4vm;
+  /*padding: 5vw 0 .5vw 0;*/
   border-radius: .5vw;
   /*background: #4dc65d;*/
-  font-size: 1vw;
+  font-size: .8vw;
   color: white;
-  /*padding: .5vw .8vw .5vw .8vw;*/
+  padding: .5vw .8vw .5vw .8vw;
   width: fit-content;
-  margin: .5vw;
+  margin-left: 1vw;
   /*border-color: #4dbbc6;*/
   border: none;
   /*font-family: Alata;*/
+  cursor: pointer;
 
+}
+
+/* Change the color of links on hover */
+.button: hover {
+  background-color: dodgerblue;
+  color: black;
 }
 
 .buttout {
