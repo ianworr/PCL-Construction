@@ -1,5 +1,6 @@
 html, body {
   scroll-behavior: smooth;
+  background-color: rgba(237, 236, 231, 1.0);
 }
 
 * {
@@ -24,19 +25,28 @@ html, body {
   --brdr:  2vw;
   --brdrs:  1vw;
   /*colors*/
-  --green: 116, 209, 148;
+  --green: 16, 139, 40;
   /*#74d194 116, 209, 148*/
   /*#4dc65d*/;
-  --blue: 116, 162, 209;
+  /*295f38 41, 95, 56*/
+  /*108b28 16, 139, 40*/
+  --blue: 16, 133, 139;
   /*74a2d1 116, 162, 209*/
   /*4dbbc6*/
-  --red: 209, 116, 116;
+  /*29415f 41, 65, 95*/
+  /*108b6e*/
+  /*10858b 16, 133, 139*/
+  --red: 139, 16, 16;
   /*d17474 209, 116, 116*/
   /*c64d63*/
-  --yellow: 209, 202, 116;
+  /*5f2929 95, 41, 41*/
+  /*8b1010 139, 16, 16*/
+  --yellow: 139, 123, 16;
   /*d1ca74 209, 202, 116*/
   /*c6bb4d unknown*/
   /*c4c64d*/
+  /*5f5329 95, 83, 41*/
+  /*8b7b10 139, 123, 16*/
 
 }
 
@@ -130,6 +140,12 @@ html, body {
   .col-12 {width: 100%;}
 }
 
+.genwidth {
+  grid-column-start: 4;
+  grid-column-end: 10;
+}
+
+
 .menu ul {
   list-style-type: none;
   margin-top: var(--ulmt);
@@ -144,6 +160,30 @@ html, body {
   /*background-color: #33b5e5;*/
   /*color: #ffffff;*/
   /*box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
+}
+
+.menu2 {
+  margin-left: 0px;
+  list-style: none;
+  justify-self: start;
+  align-content: start;
+  margin-bottom: 1px;
+  margin-top: 1px;
+  margin-left: .4vw;
+
+}
+
+.menu2 li{
+  margin-bottom: 1px;
+  justify-self: start;
+  
+
+}
+
+li::marker {
+  /*color: rgba(var(--red));*/
+  margin: 0px;
+  content: "• ";
 }
 
 .button {
@@ -171,7 +211,7 @@ html, body {
   border: none;
   /*font-family: Alata;*/
   cursor: pointer;
-
+  font-weight: bold;
 }
 
 /* Change the color of links on hover */
@@ -219,6 +259,10 @@ html, body {
   grid-template-columns: repeat(5,1fr);
   align-items: end;
   align-self: start;
+}
+
+.spaceout {
+  margin: 5px 20px 5px 0px;
 }
 
 .resume {
@@ -340,7 +384,7 @@ html, body {
   margin: 0px;
   font-weight: bold;
   font-family: Quicksand;
-  color: darkgreen;
+  /*color: darkgreen;*/
   font-size: var(--ntfs);
 }
 
